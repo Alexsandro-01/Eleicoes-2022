@@ -1,39 +1,31 @@
-import axios from 'axios';
 import { useEffect, useState } from 'react';
 import CandidatoCard from './CandidatoCard';
 import '../styles/main.css';
+import Loading from './Loading';
 
 
 function Main() {
   const [candidatos, setCandidatos] = useState([]);
   const [totalApurado, setTotalApurado] = useState('0');
-  const [localDate, setLocalDate] = useState({});
 
   async function fetchData() {
     const URL = 'https://resultados.tse.jus.br/oficial/ele2022/545/dados-simplificados/br/br-c0001-e000545-r.json'
-    const { data } = await axios.get(URL);
-    
+    const response = await fetch(
+      URL
+    )
+    const data = await response.json();
     setCandidatos(data.cand);
     setTotalApurado(Number(data.psi.replace(',', '.')));
-    parseDateHour();
-    console.log(1);
   }
 
-  function parseDateHour() {
-    const date = new Date().toLocaleDateString();
-    const helpParse = date.split("/");
-    const localDate = `${helpParse[1]}/${helpParse[0]}/${helpParse[2]}`;
-
-    const now = new Date().toLocaleTimeString();
-
-    setLocalDate({
-      today: localDate,
-      now
-    });
+  function b() {
+    setInterval(fetchData, 10000);
   }
 
+  
   useEffect(() => {
     fetchData();
+    b();
   }, []);
 
   return (
@@ -45,17 +37,14 @@ function Main() {
         </div>
       </section>
 
-      <section className='atualization'>
-        <p>Última atualização: { localDate.today } { localDate.now }</p>
-        <button
-          onClick={ () => fetchData() }
-          type="button"
-        >Atualizar</button>
-
-      </section>
       {
         candidatos.length > 0 && (
           candidatos.map((cand) => <CandidatoCard key={cand.n} candData={ cand } /> )
+        )
+      }
+      {
+        candidatos.length === 0 && (
+          <Loading />
         )
       }
     </main>
