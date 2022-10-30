@@ -1,3 +1,54 @@
 .container {
-  margin-top: 20px;
+  padding: 8px;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.container .container-bar {
+  border: solid 1px rgb(209, 209, 209);
+  height: 4px;
+  border-radius: 4px;
+  margin: 5px 0px;
+}
+
+.container .container-bar .bar {
+  height: 100%;
+  background-color: rgb(36, 122, 227);
+}
+
+.container .atualization {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: small;
+  text-align: left;
+  color: #777;
+  margin: 10px 0px;
+}
+
+.container .sec-pvv {
+  width: 100%;
+  font-size: small;
+  text-align: left;
+  color: #777;
+  margin: 10px 0;
+}
+
+.container .atualization button {
+  background-color:  #088d44be;
+  border: 1px solid #059128;
+  border-radius: 4px;
+  color:  #eaeceb;
+  padding: 8px 12px;
+  outline-color: none;
+}
+
+.container .atualization button:hover {
+  cursor: pointer;
+  background-color: #eaeceb;
+  color: #059128;
 }
