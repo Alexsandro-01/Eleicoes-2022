@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Eleicoes-2022/static/css/main.879d0005.css",
-    "main.js": "/Eleicoes-2022/static/js/main.809fd677.js",
+    "main.css": "/Eleicoes-2022/static/css/main.3576bdb7.css",
+    "main.js": "/Eleicoes-2022/static/js/main.de49faf6.js",
     "static/js/787.3cc79ab9.chunk.js": "/Eleicoes-2022/static/js/787.3cc79ab9.chunk.js",
     "static/media/LULA.jpg": "/Eleicoes-2022/static/media/LULA.5cba3259db11c18f4b27.jpg",
     "static/media/JAIR BOLSONARO.jpg": "/Eleicoes-2022/static/media/JAIR BOLSONARO.b67173daf269c647fdcb.jpg",
     "index.html": "/Eleicoes-2022/index.html",
-    "main.879d0005.css.map": "/Eleicoes-2022/static/css/main.879d0005.css.map",
-    "main.809fd677.js.map": "/Eleicoes-2022/static/js/main.809fd677.js.map",
+    "main.3576bdb7.css.map": "/Eleicoes-2022/static/css/main.3576bdb7.css.map",
+    "main.de49faf6.js.map": "/Eleicoes-2022/static/js/main.de49faf6.js.map",
     "787.3cc79ab9.chunk.js.map": "/Eleicoes-2022/static/js/787.3cc79ab9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.879d0005.css",
-    "static/js/main.809fd677.js"
+    "static/css/main.3576bdb7.css",
+    "static/js/main.de49faf6.js"
   ]
 }
