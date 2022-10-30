@@ -24,15 +24,25 @@ function Card({ candData }) {
     <section className='card'>
       <div className='box-info'>
         <div className='image'>
-          <img src={ IMAGES[candData.nm] } alt="" />
+          <img src={ IMAGES[candData.nm] } alt={ `Imagen do candidato a presidência ${ candData.nm }` } />
         </div>
         <div className='info'>
-          <p>{ partidoNumero }</p>
+          <p>
+            <span>{ partidoNumero }</span>
+            {' '}
+            {
+              candData.st !== '' && (
+                <span style={{color: '#059128'}}>
+                  - { candData.st }
+                </span>
+              )
+            }
+          </p>
           <h3>{ candData.nm }</h3>
         </div>
       </div>
       <div className='result'>
-        <p>{ candData.vap } Votos</p>
+        <p><span>{ candData.vap } Votos</span></p>
         <h3>{ candData.pvap } %</h3>
       </div>
     </section>
